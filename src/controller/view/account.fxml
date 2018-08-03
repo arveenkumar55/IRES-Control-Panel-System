@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="445.0" prefWidth="447.0" styleClass="background2" stylesheets="@Login.css" xmlns="http://javafx.com/javafx/8.0.60" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.view.AccountController">
+   <children>
+      <GridPane layoutX="52.0" layoutY="183.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="138.0" prefWidth="344.0" stylesheets="@Login.css">
+         <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="167.0" minWidth="10.0" prefWidth="88.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="264.0" minWidth="10.0" prefWidth="256.0" />
+         </columnConstraints>
+         <rowConstraints>
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+         </rowConstraints>
+         <children>
+            <Label prefHeight="17.0" prefWidth="82.0" styleClass="label3" text="        Name:" />
+            <Label prefHeight="17.0" prefWidth="77.0" styleClass="label3" text="     Address:" GridPane.rowIndex="1" />
+            <Label prefHeight="17.0" prefWidth="79.0" styleClass="label3" text="     Services:" GridPane.rowIndex="2" />
+            <TextField fx:id="nameTextField" GridPane.columnIndex="1" />
+            <TextField fx:id="addressTextField" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <TextField fx:id="serviceTextField" text="(if any)" GridPane.columnIndex="1" GridPane.rowIndex="2">
+               <font>
+                  <Font name="System Italic" size="10.0" />
+               </font>
+            </TextField>
+            <Label prefHeight="20.0" prefWidth="83.0" styleClass="label3" text="   Password:" GridPane.rowIndex="3" />
+            <PasswordField fx:id="passwordTextField" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+         </children>
+      </GridPane>
+      <RadioButton fx:id="customerButton" layoutX="263.0" layoutY="152.0" mnemonicParsing="false" onAction="#handleCustomerButton" text="Customer" />
+      <RadioButton fx:id="customerCareButton" layoutX="140.0" layoutY="152.0" mnemonicParsing="false" onAction="#handleCustomerCareButton" prefWidth="100.0" text="Customer Care" />
+      <Button defaultButton="true" layoutX="346.0" layoutY="330.0" mnemonicParsing="false" onAction="#handleSubmitButton" stylesheets="@Login.css" text="Submit" textFill="#0d0d0d" />
+      <Label fx:id="msgLabel" layoutX="95.0" layoutY="378.0" prefHeight="31.0" prefWidth="282.0" textFill="#e80505">
+         <font>
+            <Font name="System Bold Italic" size="12.0" />
+         </font></Label>
+      <Label layoutX="70.0" layoutY="151.0" prefHeight="17.0" prefWidth="50.0" styleClass="label3" stylesheets="@Login.css" text="    Type:" />
+      <Button layoutX="283.0" layoutY="329.0" mnemonicParsing="false" onAction="#handleBackButton" prefHeight="25.0" prefWidth="54.0" stylesheets="@Login.css" text="Back" textFill="#0d0d0d" />
+      <ImageView fitHeight="88.0" fitWidth="219.0" layoutX="133.0" layoutY="26.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../resources/images/download%20(1).png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>
